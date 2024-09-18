@@ -150,6 +150,9 @@ class Ticket {
      * @param {string} query Query string
      */
     static async search(api, query) {
+        console.log(endpoints.TICKET_SEARCH, {
+            [endpoints.TICKET_SEARCH_QUERY]: query,
+        })
         let response = await api.doGetCallWithParams(endpoints.TICKET_SEARCH, {
             [endpoints.TICKET_SEARCH_QUERY]: query,
         });

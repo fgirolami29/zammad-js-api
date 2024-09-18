@@ -76,6 +76,9 @@ class ZammadApi {
      * @param {*} params associative array in form "param": "value"
      */
     async doGetCallWithParams(endpoint, params) {
+        console.log(endpoint, {
+            params,
+        })
         let response = await axios.get(endpoint, {
             params,
         });
